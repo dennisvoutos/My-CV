@@ -1,10 +1,15 @@
+import DoubleContainer from "./components/DoubleContainer";
+import { Education } from "./components/Education";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
-const Menu = (props) => {
+import { WorkExperience } from "./components/WorkExperience";
+const Menu = () => {
   return (
     <>
       <Header />
       <Summary />
+      <WorkExperience />
+      <Education />
     </>
   );
 };

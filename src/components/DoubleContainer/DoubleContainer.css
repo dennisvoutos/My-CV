@@ -1,0 +1,10 @@
+.worknEducationContainer {
+  display: flex;
+  margin-top: 30px;
+}
+.leftElement {
+  flex: 1;
+}
+.rightElement {
+  flex: 1;
+}
