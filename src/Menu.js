@@ -1,7 +1,7 @@
-import DoubleContainer from "./components/DoubleContainer";
 import { Education } from "./components/Education";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
+import { TechSkills } from "./components/TechSkills";
 import { WorkExperience } from "./components/WorkExperience";
 const Menu = () => {
   return (
@@ -10,6 +10,7 @@ const Menu = () => {
       <Summary />
       <WorkExperience />
       <Education />
+      <TechSkills />
     </>
   );
 };
