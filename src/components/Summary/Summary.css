@@ -1,0 +1,8 @@
+.content {
+  display: flex;
+  justify-content: center;
+}
+.line {
+  border: "1px solid black";
+  margin: "20px 0";
+}

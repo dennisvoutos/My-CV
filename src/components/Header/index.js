@@ -5,7 +5,7 @@ import {
   LINKEDIN_PAGE,
   PHONE_NUMBER,
 } from "../../constants";
-export const Header = () => {
+const Header = () => {
   return (
     <div className="headerContainer">
       <h2>Dionysios Voutos</h2>
@@ -25,3 +25,4 @@ export const Header = () => {
     </div>
   );
 };
+export default Header;
