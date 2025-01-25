@@ -1,8 +1,10 @@
 import React from "react";
-import { Card, Modal, Button } from "antd";
+import { Card, Modal } from "antd";
 import "./Education.css";
 import { educationData } from "./constants";
 import { getEducationModalData } from "./utils";
+import { CloseButton } from "../Helpers/Buttons";
+import { FaRegHandPointer } from "react-icons/fa";
 export const Education = () => {
   const [modalInfo, setModalInfo] = React.useState(false);
   const closeModal = React.useCallback(() => {
@@ -11,7 +13,7 @@ export const Education = () => {
   const { modalContent, modalTitle } =
     modalInfo && getEducationModalData(modalInfo);
   return (
-    <div className="experienceWrapper">
+    <div className="educationWrapper">
       <Modal
         onOk={() => {
           setModalInfo(false);
@@ -20,7 +22,7 @@ export const Education = () => {
         width={"900px"}
         footer={
           <div style={{ display: "flex", justifyContent: "end" }}>
-            <Button onClick={closeModal}>Close</Button>
+            <CloseButton onClick={closeModal}>Close</CloseButton>
           </div>
         }
         open={modalInfo !== false}
@@ -34,15 +36,20 @@ export const Education = () => {
       <hr className="line" />
       {educationData.map((item, i) => {
         return (
-          <Card
-            className="cardContent"
-            key={i}
-            onClick={() => {
-              setModalInfo(item);
-            }}
-          >
-            <h4>{item.title}</h4>
-          </Card>
+          <>
+            <Card
+              className="cardContent"
+              key={i}
+              onClick={() => {
+                setModalInfo(item);
+              }}
+            >
+              <h4>{item.title}</h4>
+              <div style={{ display: "flex", justifyContent: "end" }}>
+                <FaRegHandPointer size={24} />
+              </div>
+            </Card>
+          </>
         );
       })}
     </div>
