@@ -3,12 +3,12 @@ import "./Education.css";
 import { educationData } from "./constants";
 export const Education = () => {
   return (
-    <div>
+    <div className="experienceWrapper">
       <h3 style={{ marginTop: "30px" }}>Education</h3>
-      <hr />
-      {educationData.map((item) => {
+      <hr className="line" />
+      {educationData.map((item, i) => {
         return (
-          <Card>
+          <Card className="cardContent" key={i}>
             <h4>{item.title}</h4>
           </Card>
         );

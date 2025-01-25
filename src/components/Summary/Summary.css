@@ -3,8 +3,9 @@
   justify-content: center;
 }
 .line {
-  border: "1px solid black";
-  margin: "20px 0";
+  border: 1px solid black;
+  margin: 20px 0;
+  width: 100%;
 }
 .lineSmall {
   border: "1px solid black";

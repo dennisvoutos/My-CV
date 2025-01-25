@@ -1,3 +1,21 @@
 .titleLeft {
   width: 70%;
 }
+.cardContent {
+  width: 60%;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.experienceWrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}

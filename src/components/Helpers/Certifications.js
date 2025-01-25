@@ -1,13 +1,13 @@
-import { TableData } from "./constants";
 import { Card, Row, Col } from "antd";
-export const TechSkills = () => {
+import { certificationData } from "./constants";
+export const Certifications = () => {
   return (
     <div>
-      <h3>Technical Skills</h3>
+      <h3 className="title">Certifications</h3>
       <hr className="line"></hr>
-      <Card style={{ margin: "20px auto", maxWidth: "1600px" }}>
+      <Card style={{ margin: "20px auto", maxWidth: "600px" }}>
         <Row gutter={[16, 16]}>
-          {TableData.map((skill, index) => (
+          {/* {certificationData.map((skill, index) => (
             <Col key={index} span={6}>
               <div
                 style={{
@@ -21,7 +21,7 @@ export const TechSkills = () => {
                 {skill}
               </div>
             </Col>
-          ))}
+          ))} */}
         </Row>
       </Card>
     </div>
