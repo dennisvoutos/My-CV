@@ -5,13 +5,16 @@ import { educationData } from "./constants";
 import { getEducationModalData } from "./utils";
 import { CloseButton } from "../Helpers/Buttons";
 import { FaRegHandPointer } from "react-icons/fa";
+
 export const Education = () => {
   const [modalInfo, setModalInfo] = React.useState(false);
+  let modalInfos = 0;
   const closeModal = React.useCallback(() => {
     setModalInfo(false);
   }, []);
   const { modalContent, modalTitle } =
     modalInfo && getEducationModalData(modalInfo);
+
   return (
     <div className="educationWrapper">
       <Modal
@@ -36,20 +39,19 @@ export const Education = () => {
       <hr className="line" />
       {educationData.map((item, i) => {
         return (
-          <>
-            <Card
-              className="cardContent"
-              key={i}
-              onClick={() => {
-                setModalInfo(item);
-              }}
-            >
-              <h4>{item.title}</h4>
-              <div style={{ display: "flex", justifyContent: "end" }}>
-                <FaRegHandPointer size={24} />
-              </div>
-            </Card>
-          </>
+          <Card
+            hoverable
+            className="cardContent"
+            key={i}
+            onClick={() => {
+              setModalInfo(item);
+            }}
+          >
+            <h4>{item.title}</h4>
+            <div style={{ display: "flex", justifyContent: "end" }}>
+              <FaRegHandPointer size={24} />
+            </div>
+          </Card>
         );
       })}
     </div>
