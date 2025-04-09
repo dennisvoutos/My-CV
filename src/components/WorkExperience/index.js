@@ -38,15 +38,21 @@ export const WorkExperience = () => {
         {workData.map((item, i) => {
           return (
             <Card
+              hoverable
               className="cardContent"
               onClick={() => setModalInfo(item)}
               key={i}
             >
               <h4>
                 {item.title}
-                {item.endDate === "Currently" && <h5>(Currently)</h5>}
+                <span>{item.endDate === "Currently" && " (Currently)"}</span>
               </h4>
-              <div style={{ display: "flex", justifyContent: "end" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "end",
+                }}
+              >
                 <FaRegHandPointer size={24} />
               </div>
             </Card>

@@ -23,7 +23,7 @@ const workData = [
       "Currently teaching MSDA200 Data science using python for the January 2025 - June 2025 semester",
       "Taught MSDA104 Introduction to python in the September 2024 - January 2025 semester",
       "Gained further insight in the python programing language",
-      "Teaching more than 50 students at each course",
+      "Teaching more than 50 students on each course",
     ],
   },
   {
