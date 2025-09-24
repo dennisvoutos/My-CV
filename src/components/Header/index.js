@@ -3,26 +3,47 @@ import {
   EMAIL,
   GITHUB_PAGE,
   LINKEDIN_PAGE,
+  openInNewTab,
   PHONE_NUMBER,
 } from "../../constants";
-// import { Collapse, DatePicker, Dropdown } from "antd";
 
-const Header = () => {
+const Header = ({ theme }) => {
   return (
-    <div className="headerContainer">
-      <h2>Dionysios Voutos</h2>
-      <div className="sideBySide">
-        <div>{EMAIL} | </div>
-        <div style={{ marginLeft: "5px" }}> {PHONE_NUMBER}</div>
-      </div>
-      <div style={{ padding: "5px" }}>
-        <a href={LINKEDIN_PAGE}>{LINKEDIN_PAGE}</a>
-      </div>
-      <div className=" sideBySide">
-        <div>Github: </div>
-        <a href={GITHUB_PAGE} style={{ marginLeft: "5px" }}>
-          {GITHUB_PAGE}
-        </a>
+    <div
+      className={`headerContainer ${
+        theme === "experimental" ? "experimental-header" : ""
+      }`}
+    >
+      <h2 className="name-title">Dionysios Voutos</h2>
+      <div className="contact-info">
+        <div className="contact-item">
+          <span className="contact-icon">✉️</span>
+          <span>{EMAIL}</span>
+        </div>
+        <div className="contact-item">
+          <span className="contact-icon">📞</span>
+          <span>{PHONE_NUMBER}</span>
+        </div>
+        <div className="contact-item">
+          <span className="contact-icon">💼</span>
+          <div
+            onClick={() => openInNewTab(LINKEDIN_PAGE)}
+            className="contact-link"
+            style={{ cursor: "pointer" }}
+          >
+            LinkedIn Profile
+          </div>
+        </div>
+        <div className="contact-item">
+          <span className="contact-icon">🚀</span>
+          <div
+            onClick={() => openInNewTab(GITHUB_PAGE)}
+            className="contact-link"
+            style={{ cursor: "pointer" }}
+          >
+            GitHub Portfolio
+          </div>
+        </div>
       </div>
     </div>
   );

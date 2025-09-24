@@ -23,6 +23,12 @@ const projects = [
     description:
       "This is the front-end part of the individual project i did while doing the full-stack certification by Boolean, provided of course by ManPower group, my employer at the time. You can also find the back-end repository here: https://github.com/dennisvoutos/IndividualProjectAPI",
   },
+  {
+    name: "MovieRama",
+    url: "https://github.com/dennisvoutos/MovieRama",
+    description:
+      "This app is a movie / TV series search engine, that uses the TMDB API to fetch data. I have created 2 versions of this app, one using vanilla JS and one using React. ",
+  },
 ];
 
 export { projects };

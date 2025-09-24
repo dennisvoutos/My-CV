@@ -6,9 +6,8 @@ import { getEducationModalData } from "./utils";
 import { CloseButton } from "../Helpers/Buttons";
 import { FaRegHandPointer } from "react-icons/fa";
 
-export const Education = () => {
+export const Education = ({ theme }) => {
   const [modalInfo, setModalInfo] = React.useState(false);
-  let modalInfos = 0;
   const closeModal = React.useCallback(() => {
     setModalInfo(false);
   }, []);
@@ -18,6 +17,7 @@ export const Education = () => {
   return (
     <div className="educationWrapper">
       <Modal
+        className={theme === "experimental" ? "experimental-modal" : ""}
         onOk={() => {
           setModalInfo(false);
         }}

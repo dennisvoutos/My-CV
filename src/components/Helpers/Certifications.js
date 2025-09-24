@@ -1,5 +1,5 @@
 import { certificationData } from "./constants";
-export const Certifications = () => {
+export const Certifications = ({ theme }) => {
   return (
     <div>
       <h3 className="title">Certifications</h3>
