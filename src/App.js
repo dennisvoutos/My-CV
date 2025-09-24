@@ -59,7 +59,11 @@ function App() {
           </div>
         </fieldset>
       </div>
-      {isMobile ? <MobileMenu theme={theme} /> : <Menu theme={theme} />}
+      {isMobile ? (
+        <MobileMenu theme={theme} onThemeChange={handleThemeChange} />
+      ) : (
+        <Menu theme={theme} />
+      )}
     </div>
   );
 }
