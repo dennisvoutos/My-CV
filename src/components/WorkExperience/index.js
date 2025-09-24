@@ -6,7 +6,7 @@ import { getModalData } from "./utils";
 import { CloseButton } from "../Helpers/Buttons";
 import { FaRegHandPointer } from "react-icons/fa";
 
-export const WorkExperience = () => {
+export const WorkExperience = ({ theme }) => {
   const [modalInfo, setModalInfo] = React.useState(false);
   const closeModal = React.useCallback(() => {
     setModalInfo(false);
@@ -18,6 +18,7 @@ export const WorkExperience = () => {
       <hr className="line" />
       <div className="experienceWrapper">
         <Modal
+          className={theme === "experimental" ? "experimental-modal" : ""}
           onOk={() => {
             setModalInfo(false);
           }}

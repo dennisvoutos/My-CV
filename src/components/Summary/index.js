@@ -1,14 +1,17 @@
 import { SUMMARY_MESSAGE } from "../../constants";
 import "./Summary.css";
-const Summary = () => {
+
+const Summary = ({ theme }) => {
   return (
-    <div className="container">
-      <h3>Summary</h3>
+    <div
+      className={`container ${
+        theme === "experimental" ? "experimental-container" : ""
+      }`}
+    >
+      <h3 className="section-title">Summary</h3>
       <hr className="line" />
       <div className="content">
-        <div></div>
-        <div style={{ maxWidth: "900px" }}>{SUMMARY_MESSAGE}</div>
-        <div></div>
+        <div className="summary-content">{SUMMARY_MESSAGE}</div>
       </div>
     </div>
   );
